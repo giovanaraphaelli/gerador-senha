@@ -82,6 +82,18 @@ body {
   transition: 0.5s;
 }
 
+.copy {
+  display: none;
+}
+
+.ativo {
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  background-color: #f05454;
+  padding: 5px;
+}
+
 .password:hover {
   transform: scale(1.05);
 }

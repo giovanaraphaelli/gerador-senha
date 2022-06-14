@@ -3,6 +3,7 @@ let buttonElement = document.querySelector("#button");
 let sizePass = document.querySelector("#valor");
 let password = document.querySelector("#password");
 let containerPass = document.querySelector("#container-password");
+let copyElement = document.querySelector(".copy");
 
 let charset =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@";
@@ -16,6 +17,7 @@ slider.oninput = function () {
 };
 
 function generatePass() {
+  removeCopy();
   let pass = "";
   for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
     pass += charset.charAt(Math.floor(Math.random() * n));
@@ -29,5 +31,14 @@ function copyPass() {
   navigator.clipboard.writeText(newPass);
 }
 
+function ativoCopy() {
+  copyElement.classList.add("ativo");
+}
+
+function removeCopy() {
+  copyElement.classList.remove("ativo");
+}
+
 buttonElement.addEventListener("click", generatePass);
 containerPass.addEventListener("click", copyPass);
+containerPass.addEventListener("click", ativoCopy);
