@@ -19,15 +19,14 @@ function generatePass() {
   let pass = "";
   for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
     pass += charset.charAt(Math.floor(Math.random() * n));
-    newPass = pass;
   }
   containerPass.classList.remove("hide");
   password.innerHTML = pass;
+  newPass = pass;
 }
 
 function copyPass() {
   navigator.clipboard.writeText(newPass);
-  alert("Senha Copiada!");
 }
 
 buttonElement.addEventListener("click", generatePass);
