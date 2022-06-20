@@ -5,7 +5,7 @@
 
 ## 🎯 Objetivo
 
-Página desenvolvida com o objetivo de gerar uma senha aletória, de modo a escolher o tamanho desejado. E ao final copia-la com um simples click.
+Página desenvolvida com o objetivo de gerar uma senha aletória, de modo a escolher o tamanho desejado. E ao final copia-la com um simples clique.
 
 
 ## 🛠️ Tecnologias utilizadas
